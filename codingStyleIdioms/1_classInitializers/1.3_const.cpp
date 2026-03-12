@@ -7,7 +7,7 @@
 
 class Animal {
 public:
-    Animal(int age,std::string name):age_(age),name_(name) {
+    Animal(int& age,std::string name):age_(age),name_(name) {
         std::cout << "Animal(int age) is called" << std::endl;
     }
 private:
@@ -16,6 +16,7 @@ private:
 };
 
 int main() {
-    Animal animal(10,"hh");
+    int x = 10;
+    Animal animal(x,"hh");
     return 0;
 }
